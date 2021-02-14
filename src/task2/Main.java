@@ -11,9 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
         /*
-        Выбор первых 5 элементов списка, сортировка по дате рождения от
-    старых к новым, фильтрация по весу меньше, чем 60, вывод имени и фамилии
-через пробел.
+        Вариант 7. Выбор первых 5 элементов списка, сортировка по дате рождения от
+        старых к новым, фильтрация по весу меньше, чем 60, вывод имени и фамилии
+        через пробел.
          */
         List<Human> list = new ArrayList<>();
         list.add(new Human(24, 76, "Alexey", "LstNm1", LocalDate.of(Year.now().getValue() - 24, 1, 1)));
@@ -33,8 +33,6 @@ public class Main {
         System.out.println("Фильтрация по весу меньше 60:");
         list.stream().filter((human -> human.getWeight() < 60)).forEach(System.out::println);
         System.out.println("Вывод имени и фамилии");
-        list.stream().forEach(human -> System.out.println(human.getFirstName() + " " + human.getLastName()));
-
-
+        list.forEach(human -> System.out.println(human.getFirstName() + " " + human.getLastName()));
     }
 }

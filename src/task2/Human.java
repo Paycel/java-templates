@@ -15,10 +15,6 @@ public class Human {
         this.birthDate = birthDate;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public int getWeight() {
         return weight;
     }

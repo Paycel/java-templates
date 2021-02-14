@@ -1,6 +1,9 @@
 package task5;
 
 public class Main {
+    /*
+    Реализовать паттерн Singleton как минимум 3-мя способами.
+     */
     public static void main(String[] args) {
         EagerInitializedSingleton singleton1 = EagerInitializedSingleton.getInstance();
         LazyInitializedSingleton singleton2 = LazyInitializedSingleton.getInstance();

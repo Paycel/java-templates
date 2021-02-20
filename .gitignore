@@ -104,3 +104,4 @@ modules.xml
 
 practice09-gradle/.gradle/
 practice09-gradle/build/
+practice09-gradle/docker/*.jar

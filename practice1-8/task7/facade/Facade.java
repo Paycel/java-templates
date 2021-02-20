@@ -8,9 +8,9 @@ public class Facade {
 
     public void draw(ShapeType type){
         switch (type) {
-            case Circle -> shape = new Circle();
-            case Rectangle -> shape = new Rectangle();
-            case Square -> shape = new Square();
+            case Circle: shape = new Circle();
+            case Rectangle: shape = new Rectangle();
+            case Square: shape = new Square();
         }
         shape.draw();
     }

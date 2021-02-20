@@ -11,7 +11,7 @@ public class PotionFactory {
     }
 
     public Potion createPotion(PotionType type) {
-        var potion = potions.get(type);
+        Potion potion = potions.get(type);
         if (potion == null) {
             switch (type) {
                 case HEAL:

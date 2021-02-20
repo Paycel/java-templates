@@ -103,5 +103,4 @@ modules.xml
 .idea/codestream.xml
 
 practice09-gradle/.gradle/
-practice09-gradle/docker/
 practice09-gradle/build/

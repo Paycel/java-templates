@@ -101,3 +101,7 @@ modules.xml
 # CodeStream plugin
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
+
+practice09-gradle/.gradle/
+practice09-gradle/docker/
+practice09-gradle/build/

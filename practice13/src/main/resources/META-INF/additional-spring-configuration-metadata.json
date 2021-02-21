@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "student.name",
+      "type": "java.lang.String",
+      "description": "Description for student.name."
+    },
+    {
+      "name": "student.last_name",
+      "type": "java.lang.String",
+      "description": "Description for student.last_name."
+    },
+    {
+      "name": "student.group",
+      "type": "java.lang.String",
+      "description": "Description for student.group."
+    }
+  ] }

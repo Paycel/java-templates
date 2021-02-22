@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS games
+(
+    id    SERIAL NOT NULL PRIMARY KEY ,
+    name  VARCHAR(256) NOT NULL ,
+    creation_Date VARCHAR(50) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS authors
+(
+    id    SERIAL NOT NULL PRIMARY KEY ,
+    nickname  VARCHAR(256) NOT NULL ,
+    birth_Date VARCHAR(50) NOT NULL
+);

@@ -24,8 +24,8 @@ public class Controller {
 
     @PostMapping(value = "/create-game")
     @ResponseBody
-    public void createGame(Integer authorId, @RequestBody Game game) {
-        gameService.save(game, authorId);
+    public void createGame(@RequestBody Game game) {
+        gameService.save(game);
     }
 
     @PostMapping(value = "/create-author")

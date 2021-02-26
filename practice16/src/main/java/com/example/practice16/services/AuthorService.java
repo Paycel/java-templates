@@ -31,12 +31,11 @@ public class AuthorService {
 
     public void save(GameAuthor value) {
         session.beginTransaction();
-        if (value.getId() == null)
+        if (value.getAuthor_id() == null)
             session.persist(value);
         else
             session.merge(value);
         session.getTransaction().commit();
-
     }
 
     public void remove(Integer id) {

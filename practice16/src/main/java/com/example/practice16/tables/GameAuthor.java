@@ -3,7 +3,6 @@ package com.example.practice16.tables;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,9 +14,9 @@ import java.util.List;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class GameAuthor {
     @Id
-    @Column(name = "id")
+    @Column(name = "author_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer author_id;
 
     @Column(name = "nickname")
     private String nickname;
@@ -27,7 +26,4 @@ public class GameAuthor {
 
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
     private List<Game> games;
-
-    public GameAuthor() {
-    }
 }

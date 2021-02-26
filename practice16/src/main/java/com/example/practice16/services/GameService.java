@@ -15,8 +15,6 @@ import java.util.List;
 public class GameService {
     @Autowired
     private final SessionFactory factory;
-    @Autowired
-    private AuthorService authorService;
     private Session session;
 
     public GameService(SessionFactory factory) {
@@ -33,43 +31,28 @@ public class GameService {
     }
 
     public GameAuthor getAuthorByGame(Integer id) {
-        return session.createQuery("FROM Game WHERE id = :id", Game.class)
-                .setParameter("id", id).getSingleResult().getAuthor();
+        return session.createQuery("FROM Game WHERE game_id = :id", Game.class)
+                .setParameter("id", id).setMaxResults(1).uniqueResult().getAuthor();
     }
 
-    public void save(Game value, Integer authorId) {
+    public void save(Game value) {
         session.beginTransaction();
-        System.out.println(value);
-        try {
-            value.setAuthor(authorService.getAuthors().stream()
-                    .filter(t -> t.getId().equals(authorId))
-                    .findFirst()
-                    .get()
-            );
-            if (value.getId() == null)
-                session.persist(value);
-            else
-                session.merge(value);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            session.getTransaction().commit();
-        }
+        if (value.getGame_id() == null)
+            session.persist(value);
+        else
+            session.merge(value);
+        session.getTransaction().commit();
+
     }
 
     public void remove(Integer id) {
         session.beginTransaction();
         Game item = session.find(Game.class, id);
-        try {
-            if (item != null) {
-                item.getAuthor().getGames().remove(item);
-                session.remove(item);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            session.getTransaction().commit();
+        if (item != null) {
+            session.remove(item);
         }
+        session.getTransaction().commit();
+
     }
 
     @PreDestroy

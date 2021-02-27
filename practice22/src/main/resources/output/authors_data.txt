@@ -1,0 +1,8 @@
+id	nickname	birth date
+1	1	author1
+2	2	author2
+3	3	author3
+4	4	author3
+5	5	test
+6	6	test
+7	7	test

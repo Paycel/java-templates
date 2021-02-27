@@ -1,0 +1,5 @@
+id	author_id	name	creation date
+1	1	game1	date1
+2	1	game2	date2
+3	2	game3	date3
+4	2	game3	date3

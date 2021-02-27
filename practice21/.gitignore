@@ -13,7 +13,7 @@ target/
 .springBeans
 .sts4-cache
 
-src/main/java/com/example/practice21/ConfigMail.java
+src/main/java/com/example/practice21/EmailInfo.java
 
 ### IntelliJ IDEA ###
 .idea

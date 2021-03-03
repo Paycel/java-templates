@@ -47,7 +47,7 @@ public class SchedulerService {
         game.close();
         authors.write("id\tnickname\tbirth date\n");
         for (GameAuthor item : authorService.getAuthors())
-            authors.write(String.format("%d\t%s\t%s\n", item.getId(), item.getAuthor_id(), item.getName()));
+            authors.write(String.format("%d\t%s\t%s\n", item.getId(), item.getName(), item.getBirthDate()));
         authors.close();
     }
 }
